@@ -1,0 +1,17 @@
+#Q2
+import numpy as np
+import pandas as pd
+
+x = pd.read_csv("dataset_1.1.csv").values
+print("Rank:",np.linalg.matrix_rank(x))
+print("Number of features:",x.shape[1])
+
+print("Number of redundant features:", x.shape[1]-np.linalg.matrix_rank(x))
+
+A1 = x.shape[1]
+A2 = np.linalg.matrix_rank(x)
+print(A1,A2)
+if(A2 == A1):
+    print("The matrix is Linearly Independent")
+elif(A2 < A1):
+    print("The matrix is Linearly Dependent")

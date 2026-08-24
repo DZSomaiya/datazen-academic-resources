@@ -1,0 +1,9 @@
+#es = ax1 + bx2 +cx3
+import numpy as np
+import pandas as pd
+
+x = pd.read_csv("dataset_3.csv").values
+
+a = Items_Viewed
+b = Items_Cart 
+c = Items_Purchased 
